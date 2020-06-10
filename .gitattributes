@@ -1,0 +1,4 @@
+hashlib/rhash/src/* linguist-vendored
+hashlib/mhash/src/* linguist-vendored
+hashlib/sph/src/* linguist-vendored
+hashlib/misc/src/* linguist-vendored
