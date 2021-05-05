@@ -471,7 +471,10 @@ macro hashRegister*(x: untyped): untyped =
 macro availableHashes*(): untyped =
   let hashes = hashStorage()
   if hashes.len == 0:
-    raise newException(IndexError, "no hash function imported")
+    when declared(IndexDefect):
+      raise newException(IndexDefect, "no hash function imported")
+    else:
+      raise newException(IndexError, "no hash function imported")
 
   result = newNimNode(nnkBracket)
   for x in hashes:
