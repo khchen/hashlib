@@ -10,7 +10,6 @@ when defined(nimHasUsed): {.used.}
 import ../common, endians
 export common
 
-{.passc: "-msse4.1 -mavx2".}
 {.compile: "src/xxhash.c".}
 
 type uint128 = (uint64, uint64)

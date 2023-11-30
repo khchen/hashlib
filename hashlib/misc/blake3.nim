@@ -10,7 +10,7 @@ when defined(nimHasUsed): {.used.}
 import ../common
 export common
 
-{.passc: "-msse4.1 -mavx2 -DBLAKE3_NO_AVX512".}
+{.passc: "-DBLAKE3_NO_AVX512".}
 {.compile: "src/blake3.c".}
 {.compile: "src/blake3_dispatch.c".}
 {.compile: "src/blake3_portable.c".}
