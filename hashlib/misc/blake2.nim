@@ -10,7 +10,6 @@ when defined(nimHasUsed): {.used.}
 import ../common
 export common
 
-{.passc: "-msse4.1 -mavx2".}
 {.compile: "src/blake2s.c".}
 {.compile: "src/blake2b.c".}
 
